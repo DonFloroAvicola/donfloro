@@ -3,81 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de Granja de Gallinas Sostenible</title>
+    <title>Don Floro Avícola</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Proyecto de Granja de Gallinas Sostenible</h1>
-        <p>Adopta una gallina y sé parte de la sostenibilidad</p>
+    <!-- Encabezado con Imagen de Fondo -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Don Floro Avícola</h1>
+            <p>Producción de huevos frescos y sostenibles</p>
+            <a href="#adopta" class="cta-button">Adopta una Gallina</a>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Adopta una Gallina</a></li>
-            <li><a href="#">Actualizaciones</a></li>
-            <li><a href="#">Comunidad</a></li>
-            <li><a href="#">Contáctanos</a></li>
-        </ul>
-    </nav>
+    <!-- Secciones de Información -->
+    <section class="info-grid">
+        <div class="info-item">
+            <h2>Sostenibilidad</h2>
+            <p>Nuestro compromiso con el medio ambiente nos impulsa a utilizar prácticas agrícolas sostenibles.</p>
+        </div>
+        <div class="info-item">
+            <h2>Calidad</h2>
+            <p>Garantizamos la calidad de nuestros productos con huevos frescos y saludables cada día.</p>
+        </div>
+        <div class="info-item">
+            <h2>Comunidad</h2>
+            <p>Fomentamos una comunidad consciente y participativa, donde todos pueden involucrarse.</p>
+        </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <img src="https://via.placeholder.com/1200x400.png?text=Imagen+de+la+Granja" alt="Imagen de la granja">
-            <h2>Bienvenido a Nuestra Granja</h2>
-            <p>En nuestra granja, promovemos la sostenibilidad y el bienestar animal. Al adoptar una gallina, no solo recibes huevos frescos, sino que también contribuyes a una comunidad consciente y responsable.</p>
-        </section>
+    <!-- Sección de Testimonios -->
+    <section class="testimonials">
+        <h2>Testimonios</h2>
+        <blockquote>
+            "Adoptar una gallina con Don Floro ha sido una experiencia maravillosa. ¡Los huevos son deliciosos y sé que estoy haciendo una diferencia!"
+            - Juan, Medellín
+        </blockquote>
+    </section>
 
-        <section class="adopt">
-            <h2>Adopta una Gallina</h2>
-            <img src="https://via.placeholder.com/300x200.png?text=Gallina+1" alt="Gallina 1">
-            <p>Elige una gallina para adoptar y recibe actualizaciones sobre su bienestar y producción de huevos.</p>
-            <button onclick="adoptarGallina()">Adoptar Ahora</button>
-        </section>
+    <!-- Sección de Contacto con Formulario -->
+    <section class="contact" id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="contactForm" onsubmit="return validarFormulario()">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
-        <section class="updates">
-            <h2>Noticias y Actualizaciones</h2>
-            <ul>
-                <li>Nueva gallina adoptada en la comunidad</li>
-                <li>Visita educativa en la finca</li>
-                <li>Taller de sostenibilidad para la comunidad</li>
-            </ul>
-        </section>
-
-        <section class="testimonials">
-            <h2>Testimonios de Clientes</h2>
-            <blockquote>
-                "Adoptar una gallina con Don Floro ha sido una experiencia increíble. Me encanta recibir huevos frescos y saber que estoy apoyando un proyecto sostenible."
-                - María, Bogotá
-            </blockquote>
-        </section>
-
-        <section class="contact">
-            <h2>Contáctanos</h2>
-            <p>¿Tienes preguntas? ¡Nos encantaría saber de ti!</p>
-            <form id="contactForm" onsubmit="return validarFormulario()">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
+    <!-- Pie de Página -->
     <footer>
-        <p>Contacto: info@granjagallinas.com | Síguenos en nuestras redes sociales (en el futuro)</p>
+        <p>&copy; 2024 Don Floro Avícola. Todos los derechos reservados.</p>
+        <p>Contacto: info@granjagallinas.com</p>
     </footer>
 
+    <!-- Scripts JavaScript -->
     <script>
-        // Función para mostrar mensaje de confirmación al adoptar una gallina
-        function adoptarGallina() {
-            alert("¡Gracias por adoptar una gallina! Pronto nos pondremos en contacto contigo.");
-        }
-
         // Función para validar el formulario de contacto
         function validarFormulario() {
             var nombre = document.getElementById("name").value;

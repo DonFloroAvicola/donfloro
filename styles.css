@@ -1,146 +1,83 @@
+/* Estilo General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-main {
-    padding: 20px;
-    background-color: white;
-    margin: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+h1, h2 {
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-main {
-    padding: 20px;
-    background-color: white;
-    margin: 20px;
-}
-
+/* Encabezado Hero */
 .hero {
+    background-image: url('https://via.placeholder.com/1200x500.png?text=Imagen+de+Granja');
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
-.hero img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.adopt, .updates, .testimonials, .contact {
-    background-color: #fff;
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
-button {
+.cta-button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Sección de Cuadrícula de Información */
+.info-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #e9f5e9;
+}
+
+/* Sección de Testimonios */
+.testimonials {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Sección de Contacto */
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 form label {
@@ -148,19 +85,17 @@ form label {
 }
 
 form input, form textarea {
-    margin-bottom: 10px;
+    width: 80%;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* Pie de Página */
 footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
