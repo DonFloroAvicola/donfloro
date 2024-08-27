@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Granja de Gallinas Sostenible</title>
+    <title>Proyecto de Granja de Gallinas Sostenible</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,31 +23,53 @@
     </nav>
 
     <main>
-        <section>
+        <section class="hero">
+            <img src="https://via.placeholder.com/1200x400.png?text=Imagen+de+la+Granja" alt="Imagen de la granja">
             <h2>Bienvenido a Nuestra Granja</h2>
             <p>En nuestra granja, promovemos la sostenibilidad y el bienestar animal. Al adoptar una gallina, no solo recibes huevos frescos, sino que también contribuyes a una comunidad consciente y responsable.</p>
         </section>
 
-        <section>
+        <section class="adopt">
             <h2>Adopta una Gallina</h2>
+            <img src="https://via.placeholder.com/300x200.png?text=Gallina+1" alt="Gallina 1">
             <p>Elige una gallina para adoptar y recibe actualizaciones sobre su bienestar y producción de huevos.</p>
             <button>Adoptar Ahora</button>
         </section>
 
-        <section>
+        <section class="updates">
             <h2>Noticias y Actualizaciones</h2>
-            <p>Mantente informado sobre las últimas novedades de nuestra granja.</p>
             <ul>
                 <li>Nueva gallina adoptada en la comunidad</li>
                 <li>Visita educativa en la finca</li>
                 <li>Taller de sostenibilidad para la comunidad</li>
             </ul>
         </section>
+
+        <section class="testimonials">
+            <h2>Testimonios de Clientes</h2>
+            <blockquote>
+                "Adoptar una gallina con Don Floro ha sido una experiencia increíble. Me encanta recibir huevos frescos y saber que estoy apoyando un proyecto sostenible."
+                - María, Bogotá
+            </blockquote>
+        </section>
+
+        <section class="contact">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas? ¡Nos encantaría saber de ti!</p>
+            <form action="#">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>Contacto: info@granjagallinas.com</p>
-        <p>Síguenos en nuestras redes sociales (en el futuro)</p>
+        <p>Contacto: info@granjagallinas.com | Síguenos en nuestras redes sociales (en el futuro)</p>
     </footer>
 </body>
 </html>
