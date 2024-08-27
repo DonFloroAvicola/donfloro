@@ -9,6 +9,12 @@ body {
 
 h1, h2 {
     color: #333;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 0 20px;
 }
 
 /* Encabezado Hero */
@@ -37,10 +43,41 @@ h1, h2 {
     margin-top: 10px;
 }
 
+/* Menú de Navegación */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
 /* Sección de Cuadrícula de Información */
 .info-grid {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 20px;
     padding: 20px;
     background-color: #fff;
@@ -54,6 +91,7 @@ h1, h2 {
     text-align: center;
     border-radius: 5px;
     background-color: #e9f5e9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Sección de Testimonios */
@@ -63,6 +101,17 @@ h1, h2 {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    border-radius: 5px;
+}
+
+/* Mapa */
+.mapa {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 /* Sección de Contacto */
@@ -72,6 +121,7 @@ h1, h2 {
     margin: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 form {
@@ -98,4 +148,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
