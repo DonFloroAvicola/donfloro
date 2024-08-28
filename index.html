@@ -6,10 +6,11 @@
     <title>Don Floro Avícola</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <!-- Encabezado con Imagen de Fondo -->
-    <header class="hero animate__animated animate__fadeIn">
+    <header class="hero">
         <div class="hero-content">
             <h1>Bienvenido a Don Floro Avícola</h1>
             <p>Producción de huevos frescos y sostenibles</p>
@@ -30,37 +31,36 @@
 
     <!-- Secciones de Información -->
     <section class="info-grid">
-        <div class="info-item animate__animated animate__fadeInUp">
+        <div class="info-item" data-aos="fade-up">
             <h2>Sostenibilidad</h2>
             <p>Nuestro compromiso con el medio ambiente nos impulsa a utilizar prácticas agrícolas sostenibles.</p>
         </div>
-        <div class="info-item animate__animated animate__fadeInUp">
+        <div class="info-item" data-aos="fade-up">
             <h2>Calidad</h2>
             <p>Garantizamos la calidad de nuestros productos con huevos frescos y saludables cada día.</p>
         </div>
-        <div class="info-item animate__animated animate__fadeInUp">
+        <div class="info-item" data-aos="fade-up">
             <h2>Comunidad</h2>
             <p>Fomentamos una comunidad consciente y participativa, donde todos pueden involucrarse.</p>
         </div>
     </section>
 
     <!-- Sección de Testimonios -->
-    <section class="testimonials animate__animated animate__fadeIn">
+    <section class="testimonials" data-aos="fade-right">
         <h2>Testimonios</h2>
         <blockquote>
-            "Adoptar una gallina con Don Floro ha sido una experiencia maravillosa. ¡Los huevos son deliciosos y sé que estoy haciendo una diferencia!"
-            - Juan, Medellín
+            "Adoptar una gallina con Don Floro ha sido una experiencia maravillosa. ¡Los huevos son deliciosos y sé que estoy haciendo una diferencia!" - Juan, Medellín
         </blockquote>
     </section>
 
     <!-- Mapa de Google Maps -->
-    <section class="mapa animate__animated animate__fadeIn" id="mapa">
+    <section class="mapa" id="mapa" data-aos="fade-up">
         <h2>Ubicación de Nuestra Finca</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317713.2911591632!2d-74.20017053750266!3d4.5708683143307465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f997ef1c0c5a7%3A0x5eebd61f676f7c2e!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2sco!4v1614924024638!5m2!1sen!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Sección de Contacto con Formulario -->
-    <section class="contact animate__animated animate__fadeIn" id="contacto">
+    <section class="contact" id="contacto" data-aos="fade-up">
         <h2>Contáctanos</h2>
         <form id="contactForm" onsubmit="return validarFormulario()">
             <label for="name">Nombre:</label>
@@ -80,7 +80,13 @@
     </footer>
 
     <!-- Scripts JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        AOS.init({
+            duration: 1000, // Duración de las animaciones
+            once: true // Las animaciones se activan solo una vez al desplazarse
+        });
+
         // Función para validar el formulario de contacto
         function validarFormulario() {
             var nombre = document.getElementById("name").value;
