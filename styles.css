@@ -31,6 +31,7 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     display: inline-block;
+    max-width: 80%;
 }
 
 .cta-button {
@@ -55,6 +56,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Asegura que el menú se ajuste en dispositivos pequeños */
 }
 
 nav ul li {
@@ -76,8 +78,8 @@ nav ul li a:hover {
 /* Sección de Cuadrícula de Información */
 .info-grid {
     display: flex;
+    flex-wrap: wrap; /* Ajusta los elementos para pantallas pequeñas */
     justify-content: space-around;
-    flex-wrap: wrap;
     margin: 20px;
     padding: 20px;
     background-color: #fff;
@@ -86,6 +88,7 @@ nav ul li a:hover {
 
 .info-item {
     flex: 1;
+    min-width: 250px; /* Mínimo ancho para ajustar en pantallas pequeñas */
     margin: 10px;
     padding: 20px;
     text-align: center;
@@ -136,6 +139,7 @@ form label {
 
 form input, form textarea {
     width: 80%;
+    max-width: 500px; /* Para evitar que los campos sean demasiado anchos */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -151,4 +155,32 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+    }
+    
+    .hero-content {
+        max-width: 95%;
+    }
+    
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }
